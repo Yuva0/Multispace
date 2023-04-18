@@ -1,4 +1,4 @@
-.createWrapper{
+.loginWrapper{
     width: 750px;
     padding: 0 128px;
     display: flex;
@@ -9,6 +9,14 @@
 
 .spaceIndex{
     width: 100%;
+}
+
+.newLink{
+    color:black !important
+}
+
+.newLink:hover h5{
+    color:var(--secondaryFont) !important;
 }
 
 .createButton{
@@ -38,12 +46,4 @@
 .googleButton a{
     margin-left:8px;
     display: inline-block;
-}
-
-.existingLink{
-    color:black !important
-}
-
-.existingLink:hover h5{
-    color:var(--secondaryFont) !important;
 }

@@ -18,7 +18,7 @@ export default function HomePage(){
 				</Space>
 				<Text className={classes.description}><h5>An online chat community where you can talk to anyone and everyone by creating separate spaces</h5></Text>
 			</Typography>
-			<Button type="primary" block className={classes.createButton}><Link href="/create"><h5>Create an account</h5></Link></Button>
+			<Button type="primary" block className={classes.createButton}><Link href="/register"><h5>Create an account</h5></Link></Button>
 			<Link href="/login" className={classes.existingLink}><h5><u>Already have an account?</u></h5></Link>
 		</Space>
     </div>
