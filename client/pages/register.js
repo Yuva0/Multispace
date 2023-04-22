@@ -61,7 +61,7 @@ export default function create(){
                 </Form>
                 
                 <Link href="/login" className={classes.existingLink}><h5><u>Already have an account?</u></h5></Link>
-                <Button type="primary" block className={classes.googleButton} icon={<GoogleOutlined/>}><Link href="/create"><h5>Continue with Google</h5></Link></Button>
+                <Button type="primary" block className={classes.googleButton} icon={<GoogleOutlined/>}><Link href="/create"><h5>Create an account with Google</h5></Link></Button>
             </Space>
         </div>
     );

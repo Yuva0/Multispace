@@ -1,0 +1,23 @@
+.profileWrapper{
+    width: 750px;
+    padding: 0 128px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.spaceProfile{
+   width: 100%; 
+}
+
+.createButton{
+    color:var(--primaryFont);
+    height:48px;
+    background-color: var(--brandColor);
+  }
+  
+  .createButton:hover{
+    color:var(--primaryFont) !important;
+    background-color:var(--brandColorHover) !important;
+  }

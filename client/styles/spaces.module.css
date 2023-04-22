@@ -1,0 +1,40 @@
+.spaceWrapper{
+    width: 750px;
+    padding: 0 128px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.spacesSpace{
+    width: 100%;
+}
+
+.spaceButton{
+    height: 128px;
+    padding:0 4px;
+    border-radius:50px;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--socialBackground);
+}
+
+.spaceButton:hover{
+    background-color:var(--brandColorHover) !important;
+}
+
+.spaceTitle{
+    margin-bottom: 0px !important;
+}
+
+.addSpace{
+    width: 96px;
+    height: 96px;
+}
+
+.addSpace:hover{
+    background-color:var(--brandColorHover) !important;
+}
