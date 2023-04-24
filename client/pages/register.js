@@ -1,28 +1,29 @@
+import { useRef, useContext } from 'react';
 import classes from '../styles/create.module.css';
 import { Space, Button, Typography, Input, Form } from "antd";
 const { Title, Paragraph, Text } = Typography;
 import Link from 'next/link';
+import GoogleOutlined from '@ant-design/icons/GoogleOutlined';
 
 import { useRouter } from 'next/router';
 
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from "../firebase-config";
 
-import GoogleOutlined from '@ant-design/icons/GoogleOutlined';
-
-import { useRef } from 'react';
+import AuthContext from '@/store/authContext';
 
 export default function create(){
 
     const router = useRouter();
     const errorRef = useRef();
 
-    const register = (event) => {
+    const { isLoggedIn, userUID, login } = useContext(AuthContext);
 
+    const register = (event, registerCTX) => {
         let user;
         createUserWithEmailAndPassword(auth, event.email, event.password).then((userCredentials) => 
         {
-            user = userCredentials;
+            // registerCTX.login(userCredentials.user.uid);
             router.push("/profile");
         })
         .catch((error) => {
@@ -36,7 +37,7 @@ export default function create(){
                 <Typography>
                     <Title level={3}>Create an account</Title>
                 </Typography>
-                <Form onFinish={register} scrollToFirstError>
+                <Form onFinish={() => login} scrollToFirstError>
                     <Form.Item name="email" rules={[{ type: 'email', message: 'The input is not valid E-mail!' },
                                                                           { required: true, message: 'Please enter your email address!' }]} >
                         <Input placeholder="Enter Email ID"/>
